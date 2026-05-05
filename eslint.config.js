@@ -48,18 +48,6 @@ export default [
       // Sem abreviações em nomes de variáveis
       'id-length': ['warn', { min: 3, exceptions: ['i', 'j', 'x', 'y'] }],
 
-      // Profundidade máxima de aninhamento
-      'max-depth': ['warn', 3],
-
-      // Máximo de linhas por arquivo
-      'max-lines': ['warn', { max: 100 }],
-
-      // Máximo de parâmetros por função
-      'max-params': ['warn', 3],
-
-      // Máximo de statements por função
-      'max-statements': ['warn', 15],
-
       // Sem reassign em parâmetros de função
       'no-param-reassign': 'warn',
 
@@ -74,6 +62,12 @@ export default [
 
       // Espaço após operadores unários de palavra (typeof, void, delete)
       'space-unary-ops': ['error', { words: true, nonwords: false }],
+
+      // Profundidade máxima de aninhamento
+      'max-depth': ['warn', 4],
+
+      // Máximo de parâmetros por função
+      'max-params': ['warn', 3],
 
       // Regras ignoradas
       'object-curly-spacing': 'off',
