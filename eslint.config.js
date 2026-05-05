@@ -37,7 +37,7 @@ export default [
       'quotes': ['warn', 'single', { avoidEscape: true }],
 
       // Max linha: 80 (padrão Google)
-      'max-len': ['warn', { code: 80, ignoreUrls: true }],
+      'max-len': ['warn', { code: 100, ignoreUrls: true }],
 
       // Sem trailing spaces
       'no-trailing-spaces': 'warn',
