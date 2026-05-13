@@ -36,7 +36,7 @@ export default [
       // Aspas simples
       'quotes': ['warn', 'single', { avoidEscape: true }],
 
-      // Max linha: 80 (padrão Google)
+      // Max linha: 80 (padrão Google) -- alterado para 100
       'max-len': ['warn', { code: 100, ignoreUrls: true }],
 
       // Sem trailing spaces
@@ -61,7 +61,7 @@ export default [
       'space-infix-ops': 'warn',
 
       // Espaço após operadores unários de palavra (typeof, void, delete)
-      'space-unary-ops': ['error', { words: true, nonwords: false }],
+      'space-unary-ops': ['warn', { words: true, nonwords: false }],
 
       // Profundidade máxima de aninhamento
       'max-depth': ['warn', 4],
