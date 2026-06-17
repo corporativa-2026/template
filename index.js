@@ -1,5 +1,7 @@
-import { split } from './strings.js'
+import { startServer } from './server.js';
 
-// exemplo
-console.log(split('a,b,c', ','))
-console.log(split('teste'))
+startServer(8080).then(() => { // resolve
+  console.log('Servidor de boas na porta 8080');
+}).catch((error) => { // reject
+  console.error('Servidor não iniciou: ', error);
+});

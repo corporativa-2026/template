@@ -1,0 +1,6 @@
+### Testar o servidor se estás de boas
+GET / HTTP/1.1
+Host: localhost:8080
+Accept: text/plain
+
+### Outra Requisição
