@@ -2,7 +2,8 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "ritwickdey.liveserver",
-    
+    "ms-vscode.sublime-keybindings",
+    "humao.rest-client"
   ],
   "unwantedRecommendations": [
     "github.copilot-chat"
