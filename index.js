@@ -1,7 +1,22 @@
-import { startServer } from './server.js';
+import { startServer, registerHandler, registerFilter } from './web/server.js';
 
-startServer(8080).then(() => { // resolve
-  console.log('Servidor de boas na porta 8080');
+import health from './handlers/health.js';
+import log from './filters/log.js';
+import auth from './filters/auth.js';
+
+registerFilter(log);
+registerFilter(auth, 'authentication');
+
+registerHandler({
+  method: 'GET',
+  path: '/health',
+  accept: ['text/plain', 'application/json', 'application/xml', 'text/html'],
+}, health);
+
+const port = 8080;
+
+startServer(port).then(() => { // resolve
+  console.log(`Server running at http://localhost:${port}`);
 }).catch((error) => { // reject
-  console.error('Servidor não iniciou: ', error);
+  console.error('Server cannot start: ', error);
 });
